@@ -4,6 +4,7 @@ services:
   api:
     build: 
       context: .
+    container_name: cv-api
     ports:
       - "8000:8000"
     environment:
@@ -17,6 +18,7 @@ services:
 
   db:
     image: postgres:15
+    container_name: cv-db
     ports:
       - "5432:5432"
     environment:

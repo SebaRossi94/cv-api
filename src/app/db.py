@@ -15,7 +15,7 @@ class SQLBaseModel(SQLModel):
     pass
 
 
-class SQLBaseModelAudit(SQLModel):
+class SQLBaseModelAudit(SQLBaseModel):
     created_at: datetime = Field(
         default_factory=lambda: datetime.now(timezone.utc),
         sa_column=Column(
