@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "cv-api"
+version = "0.1.0"
+description = "Backend to host CV data"
+authors = ["SebaRossi94 <seba.rossi.94@gmail.com>"]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = {extras = ["standard"], version = "^0.115.8"}
+sqlmodel = "^0.0.22"
+uvicorn = "^0.34.0"
+alembic = "^1.14.1"
+pydantic-settings = "^2.7.1"
+psycopg2-binary = "^2.9.10"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
