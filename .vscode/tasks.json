@@ -12,6 +12,11 @@
             "command": "docker compose exec api poetry run alembic upgrade head"
         },
         {
+            "label": "Revert migration",
+            "type": "shell",
+            "command": "docker compose exec api poetry run alembic downgrade -1"
+        },
+        {
             "label": "Lint",
             "type": "shell",
             "command": "black backend"
